@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { GrStatusUnknown } from "react-icons/gr";
 
 
-export default function Buttons({ id, title = 'title', Icon = GrStatusUnknown, selected = false, setSelect }) {
+export default function Buttons({ id, title = 'title', Icon = GrStatusUnknown, selected = false, setSelect , smallSize}) {
 
   let router = useRouter()
 
@@ -29,7 +29,7 @@ export default function Buttons({ id, title = 'title', Icon = GrStatusUnknown, s
           outline-[color-mix(in_oklab,#ff6a0080_50%,transparent)] text-[#ff6a00]` : ''}`}>
 
       {Icon}
-      <p className='text-[25px]'>{title}</p>
+      <p className={`${smallSize ? "hidden" : "text-[25px]"}`}>{title}</p>
     </div>
   )
 }
