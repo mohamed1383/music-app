@@ -1,0 +1,32 @@
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;          
+  height: 50px !important;
+  color: white !important;         
+  background: #7717ff;  
+  border-radius: 50%;   
+  font-size: 18px;      
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px !important 
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: gray !important;
+  border-radius: 50% !important;    
+  opacity: 0.6 !important;
+  transition: all 0.3s ease !important;
+}
+
+
+.swiper-pagination-bullet-active {
+  width: 32px !important;            
+  height: 12px !important;          
+  border-radius: 6px !important;     
+  background: #7717ff !important;    
+  opacity: 1 !important;
+}

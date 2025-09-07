@@ -10,10 +10,10 @@ export default function Logo({setSmallSize,smallSize}) {
             <PiMusicNotesSimple className='text-2xl text-[#ff6a00]'></PiMusicNotesSimple>
             <h1 className='text-2xl'>MusicApp</h1>
         </div>
-        <div onClick={setSmallSize} className="w-12 h-12  rounded-[10px] hover:bg-[#ff6a00] 
+        <div onClick={setSmallSize} className="w-12 h-12 cursor-pointer rounded-[10px] hover:bg-[#ff6a00] 
         flex justify-center items-center">
 
-            {smallSize ? <FaChevronRight className='cursor-pointer'></FaChevronRight> : <FaChevronLeft className='cursor-pointer'></FaChevronLeft>}
+            {smallSize ? <FaChevronRight></FaChevronRight> : <FaChevronLeft className='cursor-pointer'></FaChevronLeft>}
         </div>
     </div>
   )

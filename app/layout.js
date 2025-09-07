@@ -5,7 +5,7 @@ import MenuPrivorder from './context/menu';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className='relative'>
         <MenuPrivorder>
             <Menu></Menu>
           {children}
