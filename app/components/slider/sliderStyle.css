@@ -3,9 +3,16 @@
   width: 50px !important;          
   height: 50px !important;
   color: white !important;         
-  background: #7717ff;  
-  border-radius: 50%;   
+  /* background: #7717ff;   */
+  border-radius: 10px;   
   font-size: 18px;      
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+  background: #7717ff;
 }
 
 .swiper-button-next::after,
