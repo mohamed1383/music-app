@@ -1,9 +1,12 @@
 "use client"
 
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import { FiPlus } from "react-icons/fi";
+import { MenuCotext } from '@/app/context/publicDatas';
 
 export default function Header() {
+
+    let {menuSmallSize} = useContext(MenuCotext)
 
     let [filters,setFilters] = useState([
         {id: 1 , title: "Songs" , selected: true},
@@ -20,7 +23,9 @@ export default function Header() {
 
     return (
         <>
-            <div className='absolute flex justify-between top-0 right-0 px-[40px] pt-[30px] w-[80%]'>
+            <div className={`absolute flex justify-between top-0 right-0 px-[40px] pt-[30px] 
+                transition-all duration-300 ${menuSmallSize ? "w-[95%]" : "w-[80%]"}`}>
+
                 <h1 className='text-[35px] font-bold'>Your Library</h1>
                 <div className="w-[11%] h-[45px] transition-all duration-300 hover:bg-[#ff6a00cf]
        text-white cursor-pointer bg-[#ff6a00] flex justify-between px-2 items-center rounded-[10px]">
@@ -30,7 +35,8 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="absolute flex flex-col w-[80%] h-[1px] top-[15%] right-0 px-[40px]">
+            <div className={`absolute flex flex-col transition-all duration-300 
+                ${menuSmallSize ? "w-[95%]" : "w-[80%]"} h-[1px] top-[15%] right-0 px-[40px]`}>
 
                 <div className="flex gap-[15px]">
                     {filters.map((item) => 
