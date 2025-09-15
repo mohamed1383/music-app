@@ -4,22 +4,28 @@ import React from 'react'
 import { useRouter } from 'next/navigation';
 import { GrStatusUnknown } from "react-icons/gr";
 
-
-export default function Buttons({ id, title = 'title', Icon = GrStatusUnknown, selected = false, setSelect , smallSize}) {
+export default function Buttons({ id, title = 'title', Icon = GrStatusUnknown, selected = false, setSelect, smallSize }) {
 
   let router = useRouter()
 
   const selectBtn = (e) => {
 
-    setSelect((prev) => prev.map((item) => {
-      console.log(item)
-      return {
-        ...item,
-        selected: Number(id) === item.id
-      }
-    }))
+    setSelect((prev) => {
+      let btns = prev.map((item) => {
+        return {
+          ...item,
+          selected: Number(id) === item.id
+        }
+      })
 
-    router.push(`/${title}`)
+      localStorage.setItem("selectedBtn",JSON.stringify(btns))
+
+      return btns
+    })
+
+    let route = title == "Explore" ? "" : title == "Login/signIn" ? "Profile" : title
+
+    router.push(`/${route}`)
   }
 
   return (
