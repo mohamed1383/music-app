@@ -1,0 +1,33 @@
+.background {
+    background-image: url("../../../../public/Image/image\ 2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.custom_shadow {
+    box-shadow:
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+        -8px -8px 16px rgba(45, 40, 58, 0.8),
+        8px 8px 16px rgba(23, 20, 33, 0.8),
+        inset -6px -6px 12px rgba(255, 255, 255, 0.08)
+}
+
+.custom_shadow2 {
+    box-shadow: inset 5.43478px 5.43478px 10.8696px rgba(0, 0, 0, 0.05), inset -10.8696px -10.8696px 21.7391px rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(-10.8696px -10.8696px 21.7391px #3A3648) drop-shadow(10.8696px 10.8696px 21.7391px #221F2E);
+}
+
+.shadow3 {
+    box-shadow:
+        inset -4px -4px 10px rgba(0, 0, 0, 0.1),
+        inset 6px 6px 12px rgba(255, 255, 255, 0.05);
+
+    filter: drop-shadow(3px 3px 10px rgba(28, 20, 64, 0.6));
+}
+
+.btn_shadow{
+     box-shadow: 
+     -5.43px -5.43px 16.3px 0px #4a4082,
+     5.43px 5.43px 16.3px 0px #0f0a1a; 
+}
