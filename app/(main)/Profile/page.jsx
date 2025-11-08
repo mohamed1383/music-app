@@ -9,11 +9,9 @@ export default function page() {
 
   let isLogin
 
-
-  if (typeof window !== "undefined") {
+  useEffect(() => {
     isLogin = JSON.parse(localStorage.getItem("isLogin") || "false")
-  }
-
+  },[])
 
   let { menuSmallSize } = useContext(MenuCotext)
 

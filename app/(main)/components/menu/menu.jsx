@@ -15,9 +15,9 @@ export default function Menu() {
 
     let isLogin
 
-    if(window != undefined){
+    useEffect(() => {
         isLogin = JSON.parse(localStorage.getItem("isLogin") || "")
-    }
+    },[])
 
     let [smallSize,setSmallSize] = useState(false)
     let { select, setSelect,setMenuSmallSize } = useContext(MenuCotext)
